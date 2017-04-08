@@ -128,7 +128,7 @@
 		</repository>
     		<repository>
         		<id>cloudsea-commons-mvn-repo</id>
-        		<url>https://raw.github.com/repocloudsea/cloudsea-commons/repo/</url>
+        		<url>https://github.com/repocloudsea/cls-mvn-repo/tree/repo</url>
         		<snapshots>
             		<enabled>true</enabled>
             	<updatePolicy>always</updatePolicy>
