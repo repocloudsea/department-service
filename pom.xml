@@ -126,6 +126,15 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+    		<repository>
+        		<id>cloudsea-commons-mvn-repo</id>
+        		<url>https://raw.github.com/repocloudsea/cloudsea-commons/repo/</url>
+        		<snapshots>
+            		<enabled>true</enabled>
+            	<updatePolicy>always</updatePolicy>
+        	</snapshots>
+    		</repository>
+	
 	</repositories>
 
 </project>
