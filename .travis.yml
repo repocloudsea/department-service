@@ -7,4 +7,4 @@ addons:
 before_install:
  - bash install.sh
 after_success:
- sftp root@139.59.33.41:target/*.jar /home/cls-repo
+ - bash deploy.sh
