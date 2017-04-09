@@ -8,6 +8,6 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_7a321610dde2_key -iv $encrypted_7a321610dde2_iv -in id_rsa.enc -out /tmp/id_rsa -d
 - eval "$(ssh-agent -s)"
 - chmod 600 /tmp/id_rsa
-- sshpass -p qaws12__QAWS ssh-add /tmp/id_rsa
+- sshpass -p qaws12qaws ssh-add /tmp/id_rsa
 after_success:
  sftp root@139.59.33.41:target/*.jar /home/cls-repo
