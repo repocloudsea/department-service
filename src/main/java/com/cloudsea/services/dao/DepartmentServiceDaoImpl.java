@@ -17,34 +17,36 @@ import com.mongodb.MongoClient;
  *
  */
 @Component
-public class DepartmentServiceDaoImpl extends MorphiaDatastore implements DepartmentServiceDao{
+public class DepartmentServiceDaoImpl extends MorphiaDatastore implements DepartmentServiceDao {
+
 	@Autowired
 	private MongoClient mongoCLient;
 
 	@Override
 	public void save(Department department) {
-		getDs(mongoCLient, CompanyContextHolder.getCompany())
-				.save(department);
+		getDs(mongoCLient, CompanyContextHolder.getCompany()).save(department);
 	}
 
 	@Override
 	public List<Department> getAllDepartments() {
-		return getDs(mongoCLient, CompanyContextHolder.getCompany())
-				.createQuery(Department.class).asList();
+		return getDs(mongoCLient, CompanyContextHolder.getCompany()).createQuery(Department.class)
+				.asList();
 	}
 
 	@Override
 	public Department getDepartmentById(String deptId) {
-		return getDs(mongoCLient, CompanyContextHolder.getCompany())
-				.createQuery(Department.class).filter("deptId", deptId).get();
+		return getDs(mongoCLient, CompanyContextHolder.getCompany()).createQuery(Department.class)
+				.filter("deptId", deptId)
+				.get();
 	}
 
 	@Override
 	public Department getDepartmentByName(String deptName) {
-		return getDs(mongoCLient, CompanyContextHolder.getCompany())
-				.createQuery(Department.class).filter("name", deptName).get();
+		return getDs(mongoCLient, CompanyContextHolder.getCompany()).createQuery(Department.class)
+				.filter("name", deptName)
+				.get();
 	}
-	
+
 	@Override
 	public void update(Department department) {
 		// will add the implementation laterO
