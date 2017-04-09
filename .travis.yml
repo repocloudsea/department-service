@@ -8,4 +8,4 @@ before_install:
 addons:
   ssh_known_hosts: 139.59.33.41
 after_success:
- sftp root@139.59.33.41 target/*.jar /home/cls-repo
+ sftp root@139.59.33.41:target/*.jar /home/cls-repo
