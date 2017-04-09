@@ -5,6 +5,8 @@ script: mvn  clean install
 before_install:
 - openssl aes-256-cbc -K $encrypted_7a321610dde2_key -iv $encrypted_7a321610dde2_iv
   -in id_rsa.enc -out id_rsa -d
+-chmod 600 id_rsa
+- ssh-add id_rsa
 addons:
   ssh_known_hosts: 139.59.33.41
 after_success:
