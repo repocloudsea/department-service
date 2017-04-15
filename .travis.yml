@@ -12,4 +12,4 @@ before_install:
 #after_success:
 # - bash deploy.sh
 before_deploy:
-- bash install.sh
+- bash deploy.sh
