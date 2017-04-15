@@ -10,6 +10,7 @@ echo "put Sftp_testfile.txt" >> sftp_command
 echo "pwd" >> sftp_command
 echo "ls" >> sftp_command
 echo "bye" >> sftp_command
+echo "exit" >> sftp_command
 ls Sftp_testfile.txt sftp_command
 cat sftp_command
 which sshpass
