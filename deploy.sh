@@ -9,5 +9,5 @@ echo "ls" >> sftp_command
 echo "bye" >> sftp_command
 ls Sftp_testfile.txt sftp_command
 #sshpass -p voda*141# StrictHostKeyChecking=no sftp -b sftp_command root@139.59.33.41 
-sshpass -p voda*141# StrictHostKeyChecking=no sftp root@139.59.33.41:/root/testfile_demo .
+sshpass -p voda*141# StrictHostKeyChecking=no sftp root@139.59.33.41:testfile_demo .
 ls -lrt testfile_demo
