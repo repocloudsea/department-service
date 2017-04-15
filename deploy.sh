@@ -4,4 +4,6 @@ set -x # Show the output of the following commands (useful for debugging)
 ##rsync -e ssh file root@139.59.33.41:/home/cls-repo -StrictHostKeyChecking=no
 touch Sftp_testfile.txt
 pwd
-sshpass -p voda*141# StrictHostKeyChecking=no sftp root@139.59.33.41:Sftp_testfile.txt /
+cd target
+ls
+sshpass -p voda*141# StrictHostKeyChecking=no sftp root@139.59.33.41:Sftp_testfile.txt /root
