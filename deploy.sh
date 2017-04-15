@@ -7,4 +7,5 @@ ls
 pwd
 cd target
 ls
+cd ../
 sshpass -p voda*141# StrictHostKeyChecking=no sftp root@139.59.33.41:Sftp_testfile.txt /root
