@@ -15,7 +15,7 @@ ls Sftp_testfile.txt sftp_command
 cat sftp_command
 which sshpass
 pwd
-/usr/bin/sshpass -p voda*141#  sftp -v -oStrictHostKeyChecking=no -oBatchMode=no  -b - root@139.59.33.41 <<!
+/usr/bin/sshpass -p voda*141#  sftp -v -oStrictHostKeyChecking=no -oGSSAPIAuthentication=no -oBatchMode=no  -b - root@139.59.33.41 <<!
 put Sftp_testfile.txt
 pwd
 bye
