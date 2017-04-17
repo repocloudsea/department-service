@@ -28,4 +28,4 @@ pwd
 cd target
 pwd
 ls
-sshpass -p voda*141# scp department-service-0.0.1-SNAPSHOT.jar root@139.59.33.41:/home -o stricthostkeychecking=no
+sshpass -p voda*141# scp -o stricthostkeychecking=no department-service-0.0.1-SNAPSHOT.jar root@139.59.33.41:/home
