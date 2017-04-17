@@ -27,8 +27,8 @@ set -x # Show the output of the following commands (useful for debugging)
 pwd
 cd target
 pwd
-cat ~/.ssh/known_hosts
+cat ~/.ssh/known_hosts | grep 139.59.33.41
 ls -lrt department-service-0.0.1-SNAPSHOT.jar
 #sshpass -p 'Kol@@21' scp -v -q department-service-0.0.1-SNAPSHOT.jar redhat@139.59.33.41:/home/redhat
 #sshpass -p 'Kol@@21' scp -v  department-service-0.0.1-SNAPSHOT.jar redhat@139.59.33.41:/home/redhat
-sshpass -p 'Kol@@21' ssh user@server ls -la
+sshpass -p 'Kol@@21' ssh redhat@139.59.33.41 ls -la
