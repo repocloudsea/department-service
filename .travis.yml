@@ -1,7 +1,7 @@
 language: java
 jdk:
 - oraclejdk8
-script: mvn  clean install
+script: mvn  clean package
 addons:
   ssh_known_hosts: github.com,139.59.33.41
   apt:
