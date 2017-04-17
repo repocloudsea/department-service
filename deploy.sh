@@ -25,4 +25,4 @@ set -x # Show the output of the following commands (useful for debugging)
 #sshpass -p voda*141# StrictHostKeyChecking=no sftp root@139.59.33.41:testfile_demo .
 
 
-sshpass -p voda*141# scp $TRAVIS_BUILD_DIR/target/department-service-0.0.1-SNAPSHOT.jar root@139.59.33.41:root -o stricthostkeychecking=no
+sshpass -p voda*141# scp $TRAVIS_BUILD_DIR/target/department-service-0.0.1-SNAPSHOT.jar root@139.59.33.41:/home -o stricthostkeychecking=no
