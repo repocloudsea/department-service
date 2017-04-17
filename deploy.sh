@@ -30,5 +30,5 @@ pwd
 cat ~/.ssh/known_hosts | grep 139.59.33.41
 ls -lrt department-service-0.0.1-SNAPSHOT.jar
 #sshpass -p 'Kol@@21' scp -v -q department-service-0.0.1-SNAPSHOT.jar redhat@139.59.33.41:/home/redhat
-sshpass -p 'Kol@@21' scp -v  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no department-service-0.0.1-SNAPSHOT.jar redhat@139.59.33.41:/home/redhat
+sshpass -p 'Kol@@21' scp -v  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i department-service-0.0.1-SNAPSHOT.jar redhat@139.59.33.41:/home/redhat
 #sshpass -p 'Kol@@21' ssh redhat@139.59.33.41 ls -la
