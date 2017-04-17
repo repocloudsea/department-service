@@ -28,4 +28,4 @@ pwd
 cd target
 pwd
 ls
-sshpass -p Kol@@21 scp -v -q department-service-0.0.1-SNAPSHOT.jar redhat@139.59.33.41:/home/redhat
+sshpass -p 'Kol@@21' scp -v -q department-service-0.0.1-SNAPSHOT.jar redhat@139.59.33.41:/home/redhat
