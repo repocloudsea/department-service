@@ -27,5 +27,6 @@ set -x # Show the output of the following commands (useful for debugging)
 pwd
 cd target
 pwd
-ls
-sshpass -p 'Kol@@21' scp -v -q department-service-0.0.1-SNAPSHOT.jar redhat@139.59.33.41:/home/redhat
+ls -lrt department-service-0.0.1-SNAPSHOT.jar
+#sshpass -p 'Kol@@21' scp -v -q department-service-0.0.1-SNAPSHOT.jar redhat@139.59.33.41:/home/redhat
+sshpass -p 'Kol@@21' scp  department-service-0.0.1-SNAPSHOT.jar redhat@139.59.33.41:/home/redhat
