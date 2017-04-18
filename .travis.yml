@@ -1,7 +1,8 @@
 language: java
 jdk:
 - oraclejdk8
-script: mvn  clean package
+script: mvn clean package
+script: mvn cobertura:cobertura
 addons:
   ssh_known_hosts: github.com,139.59.33.41
   apt:
@@ -10,5 +11,6 @@ addons:
 before_install:
  - bash install.sh
 after_success:
+ - bash <(curl -s https://codecov.io/bash)
  - bash deploy.sh
 
