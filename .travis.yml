@@ -9,11 +9,11 @@ services:
 
 install: true
 
-script: mvn package docker:build
-script: mvn cobertura:cobertura
+script: mvn package docker:build -q
+#script: mvn cobertura:cobertura
 
 after_success:
 - docker login -e $DOCKER_EMAIL -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 - docker push cloudsea/department-service
-- bash <(curl -s https://codecov.io/bash)
+#- bash <(curl -s https://codecov.io/bash)
 
