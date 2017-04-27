@@ -10,19 +10,10 @@ services:
 install: true
 
 script: mvn package docker:build -q
-#script: mvn cobertura:cobertura
+script: mvn cobertura:cobertura
 
-#addons:
- # ssh_known_hosts: github.com,139.59.33.41
-  #apt:
-   # packages:
-    #- sshpass
-#before_install:
-# - bash install.sh
 after_success:
-#- mvn docker:build
 - docker login -e $DOCKER_EMAIL -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 - docker push cloudsea/department-service
-#- bash <(curl -s https://codecov.io/bash)
-# - bash deploy.sh
+- bash <(curl -s https://codecov.io/bash)
 
