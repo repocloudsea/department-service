@@ -117,7 +117,7 @@
 				<!--	<newName>docker.io/jocnud/department-service/${project.artifactId}:${project.version}</newName> -->
 					<serverId>docker-hub</serverId>
 					<pushImage>true</pushImage>
-                			<dockerDirectory>src/main/docker</dockerDirectory>
+                			<dockerDirectory>/</dockerDirectory>
                 			<resources>
                     				<resource>
                         			<targetPath>/</targetPath>
