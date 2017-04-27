@@ -113,10 +113,15 @@
             			<artifactId>docker-maven-plugin</artifactId>
             			<version>0.4.11</version>
             			<configuration>
+					<imageTags>
+						<imageTag>v${project.version}</imageTag>
+						<imageTag>latest</imageTag>
+					</imageTags>
+					<forceTags>true</forceTags>
                 			<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
 				<!--	<newName>docker.io/jocnud/department-service/${project.artifactId}:${project.version}</newName> -->
-					<serverId>docker-hub</serverId>
-					<pushImage>true</pushImage>
+				<!--	<serverId>docker-hub</serverId> -->
+					<pushImage>false</pushImage>
                 			<dockerDirectory>/</dockerDirectory>
                 			<resources>
                     				<resource>
