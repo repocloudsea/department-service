@@ -20,10 +20,9 @@ script: mvn cobertura:cobertura
 #before_install:
 # - bash install.sh
 after_success:
- - bash <(curl -s https://codecov.io/bash)
-# - bash deploy.sh
-
-after_deploy:
 - mvn docker:build
 - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
 - docker push cloudsea/department-service
+- bash <(curl -s https://codecov.io/bash)
+# - bash deploy.sh
+
