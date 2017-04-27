@@ -9,7 +9,7 @@ services:
 
 install: true
 
-script: mvn clean package docker:build
+script: mvn package docker:build
 #script: mvn cobertura:cobertura
 
 #addons:
