@@ -1,16 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.cloudsea.services</groupId>
-  <artifactId>department-service</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+	<groupId>com.cloudsea.services</groupId>
+	<artifactId>department-service</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-  <name>department-service</name>
-  <url>http://maven.apache.org</url>
+	<name>department-service</name>
+	<url>http://maven.apache.org</url>
 
-  <parent>
+	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.3.RELEASE</version>
@@ -24,12 +24,12 @@
 		<docker.image.prefix>cloudsea</docker.image.prefix>
 	</properties>
 
-  <dependencies>
-  		 <dependency>
-  			<groupId>com.cloudsea.services</groupId>
- 		 	<artifactId>cloudsea-commons</artifactId>
-  			<version>0.0.6</version>
-  		</dependency> 
+	<dependencies>
+		<dependency>
+			<groupId>com.cloudsea.services</groupId>
+			<artifactId>cloudsea-commons</artifactId>
+			<version>0.0.6</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -51,9 +51,9 @@
 		</dependency>
 
 		<dependency>
-    		<groupId>org.mongodb.morphia</groupId>
-    		<artifactId>morphia</artifactId>
-    		<version>1.1.1</version>
+			<groupId>org.mongodb.morphia</groupId>
+			<artifactId>morphia</artifactId>
+			<version>1.1.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -107,31 +107,23 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			
+
 			<plugin>
-            			<groupId>com.spotify</groupId>
-            			<artifactId>docker-maven-plugin</artifactId>
-            			<version>0.4.11</version>
-            			<configuration>
-					<imageTags>
-						<imageTag>v${project.version}</imageTag>
-						<imageTag>latest</imageTag>
-					</imageTags>
-					<forceTags>true</forceTags>
-                			<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-				<!--	<newName>docker.io/jocnud/department-service/${project.artifactId}:${project.version}</newName> -->
-				<!--	<serverId>docker-hub</serverId> -->
-					<pushImage>false</pushImage>
-                			<dockerDirectory>/</dockerDirectory>
-                			<resources>
-                    				<resource>
-                        			<targetPath>/</targetPath>
-                        			<directory>${project.build.directory}</directory>
-                        			<include>${project.build.finalName}.jar</include>
-                    				</resource>
-                			</resources>
-          			 </configuration>
-       			 </plugin>			
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.4.11</version>
+				<configuration>
+					<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+					<dockerDirectory>src/main/docker</dockerDirectory>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
+				</configuration>
+			</plugin>
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -165,15 +157,15 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
-    		<repository>
-        		<id>cloudsea-commons-mvn-repo</id>
-        		<url>https://raw.github.com/repocloudsea/cls-mvn-repo/repo</url>
-        		<snapshots>
-		<!-- <enabled>true</enabled> -->
-	<updatePolicy>always</updatePolicy>
-        	</snapshots>
-    		</repository>
-	
+		<repository>
+			<id>cloudsea-commons-mvn-repo</id>
+			<url>https://raw.github.com/repocloudsea/cls-mvn-repo/repo</url>
+			<snapshots>
+				<!-- <enabled>true</enabled> -->
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+
 	</repositories>
 
 </project>
