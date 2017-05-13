@@ -1,8 +1,8 @@
-package com.cloudsea.services.model;
+package com.cloudsea.department.model;
 
 import org.bson.types.ObjectId;
-import org.mongodb.morphia.annotations.Entity;
-import org.mongodb.morphia.annotations.Id;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * A standard department entity object
@@ -13,7 +13,7 @@ import org.mongodb.morphia.annotations.Id;
  * @author shahbaz03
  *
  */
-@Entity("department")
+@Document
 public class Department {
 	@Id
 	private ObjectId id;
