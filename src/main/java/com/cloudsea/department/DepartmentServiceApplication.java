@@ -13,13 +13,13 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @author Shahbaz.Alam
  *
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = { "com.cloudsea.*" })
 @EnableSwagger2
-@Import(SpringDataRestConfiguration.class)
+@Import(value = { SpringDataRestConfiguration.class })
 public class DepartmentServiceApplication {
+
 	public static void main(String[] args) {
 		SpringApplication.run(DepartmentServiceApplication.class, args);
 	}
 
 }
-
